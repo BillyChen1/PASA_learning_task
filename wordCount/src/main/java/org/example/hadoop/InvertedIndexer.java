@@ -87,6 +87,7 @@ public class InvertedIndexer {
         private Path[] localFiles;
         private String pattern = "[^\\w]"; // 正则表达式，代表不是0-9, a-z, A-Z,的所有其它字
 
+        @Override
         public void setup(Context context) throws IOException, InterruptedException {
             stopwords = new TreeSet<String>();
             Configuration conf = context.getConfiguration();
